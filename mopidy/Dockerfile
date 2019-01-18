@@ -49,7 +49,7 @@ COPY mopidy.conf /var/lib/mopidy/.config/mopidy/mopidy.conf
 COPY run.sh /
 RUN chmod a+x /run.sh
 
-VOLUME ["/usr/share/hassio/www/audio","usr/share/mopidy"]
+VOLUME ["/usr/share/hassio/www/audio","usr/share/mopidy","/share/mopidy/media"]
 
 EXPOSE 6600 6680
 CMD [ "/run.sh" ]
