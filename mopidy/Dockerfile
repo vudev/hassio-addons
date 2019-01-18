@@ -43,7 +43,7 @@ RUN set -ex \
 
 
 COPY mopidy.conf /var/lib/mopidy/.config/mopidy/mopidy.conf
-
+VOLUME ["/usr/share/hassio/www/audio"]
 # Copy data for add-on
 COPY run.sh /
 RUN chmod a+x /run.sh
