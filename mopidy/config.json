@@ -3,13 +3,20 @@
     "version": "0.2.6",
     "slug": "mopidy",
     "description": "mopidy music server",
-    "url": "https://github.com/bestlibre/hassio-addons/tree/master/mopidy",
+    "url": "https://github.com/vudev/hassio-addons/tree/master/mopidy",
     "startup": "application",
     "boot": "auto",
     "image": "bestlibre/{arch}-mopidy",
     "audio": true,
     "options": {"local_scan": true,
-	        "options": []},
+	        "options": [{
+      "name": "local/media_dir",
+      "value": "/share/mopidy/media"
+    },
+    {
+      "name": "m3u/playlists_dir",
+      "value": "/share/mopidy/playlists/"
+    }]},
     "schema": {
 	"local_scan": "bool?",
 	"options": [{"name": "str", "value": "str"}]
